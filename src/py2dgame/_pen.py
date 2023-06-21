@@ -1,5 +1,5 @@
 import pygame
-from pystage.core._base_sprite import BaseSprite
+from py2dgame._base_sprite import BaseSprite
 
 
 

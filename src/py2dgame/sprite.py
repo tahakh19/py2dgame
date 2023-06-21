@@ -3,15 +3,15 @@ import pkg_resources
 
 
 # Mixins
-from pystage.core._events import _Events
-from pystage.core._motion import _Motion
-from pystage.core._sensing import _Sensing, _SensingSprite
-from pystage.core._looks import _LooksSprite
-from pystage.core._pen import _Pen
-from pystage.core._variables import _Variables
-from pystage.core._operators import _Operators
-from pystage.core._control import _ControlSprite
-from pystage.core._sound import _Sound
+from py2dgame._events import _Events
+from py2dgame._motion import _Motion
+from py2dgame._sensing import _Sensing, _SensingSprite
+from py2dgame._looks import _LooksSprite
+from py2dgame._pen import _Pen
+from py2dgame._variables import _Variables
+from py2dgame._operators import _Operators
+from py2dgame._control import _ControlSprite
+from py2dgame. _sound import _Sound
 
 
 class CoreSprite(_Motion, _Events, _LooksSprite, _Sound, _Sensing, _SensingSprite, _ControlSprite, _Operators, _Variables, _Pen):
@@ -20,12 +20,12 @@ class CoreSprite(_Motion, _Events, _LooksSprite, _Sound, _Sensing, _SensingSprit
         self.stage = stage
         # Above attributes need to be set first so that mixins can access them properly
         super().__init__()
-        default_file = pkg_resources.resource_filename("pystage", "images/zombie_idle.png")
+        default_file = pkg_resources.resource_filename("py2dgame", "images/zombie_idle.png")
         self.image = pygame.image.load(default_file)
         self.rect = self.image.get_rect()
         self.mask = pygame.mask.from_surface(self.image)
         if costume:
-            self.pystage_addcostume(costume)
+            self.py2dgame_addcostume(costume)
             self.name = "Sprite" if costume=="default" else costume 
         else:
             self.name = "Sprite"
@@ -33,7 +33,7 @@ class CoreSprite(_Motion, _Events, _LooksSprite, _Sound, _Sensing, _SensingSprit
         self.facade = None
 
 
-    def pystage_setname(self, name):
+    def py2dgame_setname(self, name):
         self.name = name
 
 

@@ -1,7 +1,7 @@
 import ast
 import inspect
 
-from pystage.l10n.api import get_core_function_from_instance
+from py2dgame.l10n.api import get_core_function_from_instance
 
 # Functions that need to be yielded for screen refresh
 yield_funcs = [

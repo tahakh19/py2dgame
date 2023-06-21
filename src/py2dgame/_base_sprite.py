@@ -1,7 +1,7 @@
 import pygame
 
-from pystage.core.code_block import CodeBlock, CodeManager
-from pystage.core.assets import CostumeManager
+from py2dgame.code_block import CodeBlock, CodeManager
+from py2dgame.assets import CostumeManager
 
 class BaseSprite(pygame.sprite.Sprite):
     """Base Class for Mixin Classes that need access to the stage.

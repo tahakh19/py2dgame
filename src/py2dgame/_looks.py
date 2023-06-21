@@ -1,6 +1,6 @@
-from pystage.core.gui import BubbleManager, Bubble
-from pystage.core.assets import CostumeManager
-from pystage.core._base_sprite import BaseSprite
+from py2dgame.gui import BubbleManager, Bubble
+from py2dgame.assets import CostumeManager
+from py2dgame._base_sprite import BaseSprite
 
 
 class _Looks(BaseSprite):

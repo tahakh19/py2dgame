@@ -1,4 +1,4 @@
-from pystage.core._base_sprite import BaseSprite
+from py2dgame._base_sprite import BaseSprite
 
 class _Control(BaseSprite):
 

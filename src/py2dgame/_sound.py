@@ -1,7 +1,7 @@
 import pygame
 from pygame.mixer import music
-from pystage.core.assets import SoundManager
-from pystage.core._base_sprite import BaseSprite
+from py2dgame.assets import SoundManager
+from py2dgame._base_sprite import BaseSprite
 import time
 
 

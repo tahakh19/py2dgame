@@ -1,12 +1,12 @@
 import os
-# from pystage.util import stderr_redirector
+# from py2dgame.util import stderr_redirector
 import sys
 import io
 import pygame
 import pkg_resources
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPM
-import pystage
+import py2dgame
 
 _round = lambda v: pygame.Vector2(round(v.x), round(v.y))
 
@@ -62,7 +62,7 @@ class CostumeManager():
                 return
 
     def update_sprite_image(self):
-        if isinstance(self.owner, pystage.core.CoreStage):
+        if isinstance(self.owner, py2dgame.CoreStage):
             return
         image, new_center = self.rotate_and_scale()
         image.set_alpha((100-self.owner.ghost)/100*255)
@@ -150,7 +150,7 @@ class Costume():
         self.sprite = sprite
         self.file = None
         self.name = name
-        internal_folder = pkg_resources.resource_filename("pystage", "images/")
+        internal_folder = pkg_resources.resource_filename("py2dgame", "images/")
         for folder in ["", "images/", "bilder/", internal_folder]:
             for ext in ["", ".bmp", ".png", ".jpg", ".jpeg", ".gif", ".svg"]:
                 if os.path.exists(f"{folder}{name}{ext}"):
@@ -159,7 +159,7 @@ class Costume():
             if self.file is not None:
                 break
         if self.file is None:
-            self.file = pkg_resources.resource_filename("pystage", "images/zombie_idle.png")
+            self.file = pkg_resources.resource_filename("py2dgame", "images/zombie_idle.png")
         # if self.file.endswith(".svg"):
         #     print(f"Converting SVG file: {self.file}")
         #     print("\nWARNING: SVG conversion is for convenience only")
@@ -212,7 +212,7 @@ class Sound():
         self.sprite = sprite
         self.file = None
         self.sound = None
-        internal_folder = pkg_resources.resource_filename("pystage", "sounds/")
+        internal_folder = pkg_resources.resource_filename("py2dgame", "sounds/")
         for folder in ["", "sounds/", "klaenge/", internal_folder]:
             for ext in ["", ".wav", ".ogg", ".mp3"]:
                 if os.path.exists(f"{folder}{name}{ext}"):

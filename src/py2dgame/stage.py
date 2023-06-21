@@ -4,16 +4,16 @@ import sys
 import pygame
 
 # Mixins
-from pystage.core._control import _Control
-from pystage.core._events import _Events
-from pystage.core._looks import _LooksStage
-from pystage.core._operators import _Operators
-from pystage.core._sensing import _Sensing
-from pystage.core._sound import _Sound
-from pystage.core._variables import _Variables
-from pystage.core.messages import MessageBroker
-from pystage.core.sprite import CoreSprite
-from pystage.core.asking import InputManager
+from py2dgame._control import _Control
+from py2dgame._events import _Events
+from py2dgame._looks import _LooksStage
+from py2dgame._operators import _Operators
+from py2dgame._sensing import _Sensing
+from py2dgame._sound import _Sound
+from py2dgame._variables import _Variables
+from py2dgame.messages import MessageBroker
+from py2dgame.sprite import CoreSprite
+from py2dgame.asking import InputManager
 
 
 class SpriteGroup(pygame.sprite.OrderedUpdates):
@@ -118,7 +118,7 @@ class CoreStage(
         self.timer = 0
         self.show_sprite_boundaries = "--show-sprite-boundaries" in sys.argv
 
-    def pystage_createsprite(self, costume="default"):
+    def py2dgame_createsprite(self, costume="default"):
         sprite = CoreSprite(self, costume)
         self.sprites.add(sprite)
         self._update_visible()
@@ -149,7 +149,7 @@ class CoreStage(
             return
         surface.blit(image, (0, 0))
 
-    def pystage_play(self):
+    def py2dgame_play(self):
         self.running = True
         """
         This runs the game loop

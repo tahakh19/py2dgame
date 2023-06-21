@@ -4,9 +4,9 @@ import pkg_resources
 pygame.init()
 
 
-regular_font_14 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-regular.ttf"), 14)
-bold_font_9 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-bold.ttf"), 9)
-light_font_9 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-bold.ttf"), 9)
+regular_font_14 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-regular.ttf"), 14)
+bold_font_9 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-bold.ttf"), 9)
+light_font_9 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-bold.ttf"), 9)
 
 color1 = (87,94,117) # Text in bubbles
 # Variable name bold 9
@@ -125,8 +125,8 @@ def render_lines(lines, font, color, lw, lh, lh_offset):
 
 
 class Bubble(pygame.sprite.Sprite):
-    say_file = pkg_resources.resource_filename("pystage", "images/say.png")
-    think_file = pkg_resources.resource_filename("pystage", "images/think.png")
+    say_file = pkg_resources.resource_filename("py2dgame", "images/say.png")
+    think_file = pkg_resources.resource_filename("py2dgame", "images/think.png")
     
     SAY = ResizableBorder(say_file, (18,18,154, 35))
     THINK = ResizableBorder(think_file, (18,18,154, 35))

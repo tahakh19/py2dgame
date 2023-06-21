@@ -1,7 +1,7 @@
 import pygame
-import pystage
-from pystage.core.constants import KEY_MAPPINGS
-from pystage.core._base_sprite import BaseSprite
+import py2dgame
+from py2dgame.constants import KEY_MAPPINGS
+from py2dgame._base_sprite import BaseSprite
 
 
 

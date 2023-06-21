@@ -1,9 +1,9 @@
 import pygame
 import enum
 import math
-from pystage.core._sensing import _Sensing
-from pystage.core._looks import _LooksSprite
-from pystage.core.assets import CostumeManager
+from py2dgame._sensing import _Sensing
+from py2dgame._looks import _LooksSprite
+from py2dgame.assets import CostumeManager
 import random
 
 def _deg2rad(deg):

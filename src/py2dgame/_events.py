@@ -1,5 +1,5 @@
-from pystage.core.constants import KEY_MAPPINGS
-from pystage.core._base_sprite import BaseSprite
+from py2dgame.constants import KEY_MAPPINGS
+from py2dgame._base_sprite import BaseSprite
 
 
 class _Events(BaseSprite):

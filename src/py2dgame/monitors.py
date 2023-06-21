@@ -4,9 +4,9 @@ import pkg_resources
 
 class Monitor(pygame.sprite.Sprite):
 
-    BOLD_FONT_9 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-bold.ttf"), 9)
-    LIGHT_FONT_9 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-light.ttf"), 9)
-    LIGHT_FONT_11 = pygame.font.Font(pkg_resources.resource_filename("pystage", "fonts/roboto-light.ttf"), 11)
+    BOLD_FONT_9 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-bold.ttf"), 9)
+    LIGHT_FONT_9 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-light.ttf"), 9)
+    LIGHT_FONT_11 = pygame.font.Font(pkg_resources.resource_filename("py2dgame", "fonts/roboto-light.ttf"), 11)
 
     VARIABLE_COLOR = (255, 140, 26)
     MOTION_COLOR = (76, 151, 255)

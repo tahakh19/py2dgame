@@ -1,5 +1,5 @@
-from pystage.core._base_sprite import BaseSprite
-from pystage.core.monitors import Monitor
+from py2dgame._base_sprite import BaseSprite
+from py2dgame.monitors import Monitor
 
 class _Variables(BaseSprite):
     # Also monitors
