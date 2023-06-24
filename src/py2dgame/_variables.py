@@ -67,7 +67,7 @@ class _Variables(BaseSprite):
         monitor.hide()
 
 
-    def pystage_makevariable(self, name, all_sprites=True):
+    def py2dgame_makevariable(self, name, all_sprites=True):
         # Make sure a variable name is unique for a sprite or globally. 
         # Same name for local variables is allowed!
         if name in self.stage.variables:
@@ -91,28 +91,28 @@ class _Variables(BaseSprite):
             self.stage.monitors[name] = monitor
 
 
-    def pystage_setmonitorposition(self, name, x, y):
+    def py2dgame_setmonitorposition(self, name, x, y):
         monitor = self._get_monitor(name)
         if not monitor:
             return
         monitor.set_position(x, y)
 
 
-    def pystage_setmonitorstyle_large(self, name):
+    def py2dgame_setmonitorstyle_large(self, name):
         monitor = self._get_monitor(name)
         if not monitor:
             return
         monitor.set_style(Monitor.LARGE)
 
 
-    def pystage_setmonitorstyle_normal(self, name):
+    def py2dgame_setmonitorstyle_normal(self, name):
         monitor = self._get_monitor(name)
         if not monitor:
             return
         monitor.set_style(Monitor.NORMAL)
 
 
-    def pystage_setmonitorstyle_slider(self, name):
+    def py2dgame_setmonitorstyle_slider(self, name):
         monitor = self._get_monitor(name)
         if not monitor:
             return

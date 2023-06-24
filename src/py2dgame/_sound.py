@@ -19,7 +19,7 @@ class _Sound(BaseSprite):
         self.current_volume = 100
 
 
-    def pystage_addsound(self, name):
+    def py2dgame_addsound(self, name):
         self.sound_manager.add_sound(name)
 
 
