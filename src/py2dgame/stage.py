@@ -65,7 +65,7 @@ class SpriteGroup(pygame.sprite.OrderedUpdates):
 class CoreStage(
     _LooksStage, _Sound, _Events, _Control, _Operators, _Sensing, _Variables
 ):
-    def __init__(self, name="Welcome to pyStage!", width=480, height=360):
+    def __init__(self, name="Welcome to py2dgame!", width=480, height=360):
         # Check pygame version
         pygame_major = int(pygame.ver.split(".")[0])
         if pygame_major < 2:

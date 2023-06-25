@@ -218,7 +218,7 @@ class _LooksSprite(_Looks):
         self.size = percent
 
     def looks_show(self):
-        print("Show", self)
+        #TODO: print("Show", self)
         if self.visible:
             return
         self.visible = True
@@ -226,7 +226,7 @@ class _LooksSprite(_Looks):
 
 
     def looks_hide(self):
-        print ("Hide", self)
+        #TODO: print ("Hide", self)
         if not self.visible:
             return
         self.visible = False

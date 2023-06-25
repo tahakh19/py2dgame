@@ -12,7 +12,7 @@ class _Events(BaseSprite):
 
     def event_whenflagclicked(self, generator_function, name="", no_refresh=False):
         new_block = self.code_manager.register_code_block(generator_function, name)
-        print(f"Bound to start: {new_block.name}")
+        #TODO: print(f"Bound to start: {new_block.name}")
         new_block.start_or_restart()
 
 
@@ -29,7 +29,7 @@ class _Events(BaseSprite):
         if pg_key not in self.code_manager.key_pressed_blocks:
             self.code_manager.key_pressed_blocks[pg_key] = []
         self.code_manager.key_pressed_blocks[pg_key].append(new_block.name)
-        print(f"Bound to key press ({key}/{pg_key}): {new_block.name}")
+        #TODO: print(f"Bound to key press ({key}/{pg_key}): {new_block.name}")
 
 
     def event_whenthisspriteclicked(self, generator_function, name="", no_refresh=False):
@@ -38,7 +38,7 @@ class _Events(BaseSprite):
         '''
         new_block = self.code_manager.register_code_block(generator_function, name, no_refresh)
         self.code_manager.clicked_blocks.append(new_block)
-        print(f"Bound to click: {new_block.name}")
+        #TODO: print(f"Bound to click: {new_block.name}")
 
 
 
@@ -71,7 +71,7 @@ class _Events(BaseSprite):
         if message not in self.code_manager.broadcast_blocks:
             self.code_manager.broadcast_blocks[message] = []
         self.code_manager.broadcast_blocks[message].append(new_block.name)
-        print(f"Bound to broadcast message '{message}': {new_block.name}")
+        #TODO: print(f"Bound to broadcast message '{message}': {new_block.name}")
 
 
     def event_broadcast(self, message):

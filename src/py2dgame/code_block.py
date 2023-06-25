@@ -50,7 +50,7 @@ class CodeManager():
     def register_code_block(self, generator_function, name="", no_refresh=False):
         new_block = CodeBlock(self.owner, generator_function, name, no_refresh=no_refresh)
         self.code_blocks[new_block.name] = new_block
-        print(f"New code block registered: {new_block.name}")
+        #TODO: print(f"New code block registered: {new_block.name}")
         return new_block
 
     def _update(self, dt):
@@ -172,7 +172,7 @@ class CodeBlock():
                 self.generator = self.generator_function(target)
             else:
                 self.generator = self.generator_function()
-        print(f"Start of {self.name} triggered.")
+        #TODO: print(f"Start of {self.name} triggered.")
 
     def update(self, dt):
         '''
@@ -193,7 +193,7 @@ class CodeBlock():
                 if self.sprite_or_stage.facade:
                     target = self.sprite_or_stage.facade
                 self.generator = self.generator_function(target)
-                print(f"CodeBlock {self.name} has finished.")
+                #TODO: print(f"CodeBlock {self.name} has finished.")
                 self.running = False
                 return
             else:
@@ -206,7 +206,7 @@ class CodeBlock():
                         self.wait_time += self.add_to_wait_time
                         self.add_to_wait_time = 0
                 except StopIteration:
-                    print(f"CodeBlock {self.name} has finished.")
+                    #TODO: print(f"CodeBlock {self.name} has finished.")
                     self.running = False
         elif self.gliding:
             self.sprite_or_stage.motion_setx(

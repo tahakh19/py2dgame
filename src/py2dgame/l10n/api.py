@@ -19,7 +19,7 @@ def get_translated_function(corefunc, language, stage=False):
     """
     if language=="core":
         return corefunc
-    lang = importlib.import_module(f"pystage.{language}")
+    lang = importlib.import_module(f"py2dgame.{language}")
     cls = lang.stage_class if stage else lang.sprite_class
     for name, func in inspect.getmembers(cls, predicate=inspect.isfunction):
         for i in dis.Bytecode(func):
@@ -47,7 +47,7 @@ def get_core_function(translated, language, stage=False):
     """
     if language=="core":
         return translated
-    lang = importlib.import_module(f"pystage.{language}")
+    lang = importlib.import_module(f"py2dgame.{language}")
     cls = lang.stage_class if stage else lang.sprite_class
     for name, func in inspect.getmembers(cls, predicate=inspect.isfunction):
         for i in dis.Bytecode(func):

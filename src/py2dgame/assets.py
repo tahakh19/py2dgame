@@ -179,7 +179,7 @@ class Costume():
         offset = pygame.Vector2(self.image.get_offset())
         self.center_x = (float(self.image.get_parent().get_width()) / 2) - offset.x if center_x is None else (float(center_x) / factor) - offset.x 
         self.center_y = (float(self.image.get_parent().get_height()) / 2) - offset.y if center_y is None else (float(center_y) / factor) - offset.y
-        print(f"New costume: {name} -> {self.file}")
+        #TODO: print(f"New costume: {name} -> {self.file}")
 
 
     def __str__(self):
@@ -221,7 +221,7 @@ class Sound():
             if self.file is not None:
                 break
         if self.file.endswith(".mp3"):
-            print("WARNING: MP3 is not supported in pyStage. Use wav or ogg format.")
+            print("WARNING: MP3 is not supported in py2dgame. Use wav or ogg format.")
         elif self.file is not None:
             self.sound = pygame.mixer.Sound(self.file)
 
