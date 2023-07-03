@@ -15,6 +15,8 @@ class _Events(BaseSprite):
         #TODO: print(f"Bound to start: {new_block.name}")
         new_block.start_or_restart()
 
+    def event_whenstartclicked(self, generator_function, name="", no_refresh=False):
+        return self.event_whenflagclicked(generator_function, name, no_refresh)
 
     def event_whenkeypressed(self, key, generator_function, name="", no_refresh=False):
         '''
