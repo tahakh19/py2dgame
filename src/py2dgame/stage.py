@@ -41,6 +41,12 @@ class SpriteGroup(pygame.sprite.OrderedUpdates):
         self._spritelist.remove(sprite)
         self._spritelist.insert(0, sprite)
         # print(self._spritelist)
+    
+    def remove(self, sprite):
+        if not sprite in self._spritelist:
+            raise ValueError(f"Sprite {sprite} unknown.")
+        self._spritelist.remove(sprite)
+        # print(self._spritelist)
 
     def layer_forward(self, sprite, value=1):
         if not sprite in self._spritelist:
@@ -60,6 +66,9 @@ class SpriteGroup(pygame.sprite.OrderedUpdates):
 
     def insert(self, i, sprite):
         self._spritelist.insert(i, sprite)
+
+    #def empty(self):
+    #    self._spritelist.clear()
 
 
 class CoreStage(
@@ -128,6 +137,21 @@ class CoreStage(
             # https://github.com/PyCQA/pylint/issues/1493
         else:
             return sprite
+
+    def py2dgame_addsprite(self, sprite):
+        self.sprites.add(sprite)
+        self._update_visible()
+
+    #def py2dgame_killsprite(self, sprite):
+    #    #self.visible_sprites.remove(sprite)
+    #    #self.sprites.remove(sprite)
+    #    sprite.kill()
+    #    print(self.sprites)
+    #    print(self.visible_sprites)
+    #    
+    #    #self.bubbles = pygame.sprite.Group()
+    #    #self.visible_bubbles = pygame.sprite.Group()
+    #    #self.monitor_group = pygame.sprite.Group()
 
     def _update_visible(self):
         self.visible_sprites.empty()
