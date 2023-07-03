@@ -1,8 +1,11 @@
 # py2dgame
 
+#uninstall
+pip uninstall py2dgame
+
 # install
-pip install git+https://github.com/tahakh19/py2dgame.git --force-reinstall 
+pip install git+https://github.com/tahakh19/py2dgame.git 
 
 or 
 
-python -mpip install git+https://github.com/tahakh19/py2dgame.git --force-reinstall
+python -mpip install git+https://github.com/tahakh19/py2dgame.git 
