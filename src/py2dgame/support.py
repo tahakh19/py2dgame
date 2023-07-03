@@ -82,7 +82,7 @@ def touching_color(color, threshold=0): ## touch color
     x, y, clicked = mouse()
 
     c = stage.surface.get_at((x, y))[:3]
-    print("color=", c)
+    #print("color=", c)
     touch = True
     for i in [0, 1, 2]:
         if abs (color[i] - c[i]) > threshold:
